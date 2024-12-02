@@ -17,6 +17,7 @@ h1, h2 {
 img {
     border-radius: 10px;
     max-height: 300px;
+    width: 100%; /* Ensure images scale properly */
 }
 
 /* Cards Styling */
@@ -32,14 +33,7 @@ img {
 /* Project Card Styling */
 .project-card {
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
 }
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
 
 /* Form Styling */
 .contact-form {
@@ -74,3 +68,60 @@ header .btn:hover {
     transition: opacity 0.3s ease;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+        padding: 20px;
+    }
+
+    header .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #social-links a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .skill-card, .project-card {
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .row {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    header .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #social-links a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
